@@ -3,9 +3,9 @@ import Table from './Table'
 import Form from './Form';
 
 /* State
-State can update private data from a component.
-You can think of state as any data that should be saved and modified without necessarily being added to
-a database for example, adding and removing items from a shopping cart before confirming your purchase.
+State kan uppdatera data från en component.
+Tänk att det är data som ska sparas och ändras utan att nödvändigtvis adderas i en databas.
+Ex lägga till och ta bort från en varukorg innan man trycker på köp
 ==================================================================================================== */
 
 class App extends Component { // En class component. Laddar in Component som en property till React. Stor bokstav för att skilja från vanliga HTML-element
@@ -23,7 +23,7 @@ class App extends Component { // En class component. Laddar in Component som en 
     });
   }
 
-  handleSubmit = character => { // updates the state by taking the existing this.state.characters and adding the new character parameter, using the ES6 spread operator
+  handleSubmit = character => { // uppdaterar state genom att ta this.state.characters och lägga till nya parametern, med ES6 operator
     this.setState({ characters: [...this.state.characters, character] })
   }
 

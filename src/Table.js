@@ -15,15 +15,15 @@ const TableHeader = () => {
 }
 
 /* Props
-Props are an effective way to pass existing data to a React component,
-however the component cannot change the props - they're read-only
+Props är ett effektivt sätt att skicka existerande data till en React component,
+men component kan inte ändra props, de är read-only.
 =================================================================== */
 
-const TableBody = props => { // pass the props through as a parameter
-  const rows = props.characterData.map((row, index) => { // map through the array to return a table row for each object in the array
+const TableBody = props => { // skickar igenom props som en parameter
+  const rows = props.characterData.map((row, index) => { // går igenom en array för att returnera en lista med varje object i arrayen
     return (
-      // always use keys when making lists in React, as they help identify each list item
-      // pass the key/index through as a parameter, so the filter function knows which item to remove
+      // använd alltid key när man gör listor i React, för att hjälpa till att identifiera varje objekt
+      // skickar vidare key/index som en parameter, så filtreringsfunktionen vet vilket objekt som ska raderas
       <tr key={index}>
         <td>{row.name}</td>
         <td>{row.description}</td>
